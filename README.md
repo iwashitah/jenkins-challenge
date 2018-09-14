@@ -1,4 +1,4 @@
-# gradle-example
+# Jenkins Challenge with Gradle
 Simplest Gradle example for JFrog Jenkins Challenge.
 
 Use [Artifactory Jenkins plugin documentation](https://www.jfrog.com/confluence/display/RTF/Working+With+Pipeline+Jobs+in+Jenkins) to build the project.
