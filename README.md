@@ -13,22 +13,24 @@ Use [Artifactory Jenkins plugin documentation](https://www.jfrog.com/confluence/
 
 ```
 node {
-   stage('Preparation') {
-      // Get the code from a GitHub repository
-      git 'https://github.com/jbaruch/gradle-example.git'
-      // create a new Artifactory server using the credentials defined in Jenkins 
-      // create a new Gradle build
-      // set the resolver to the Gradle build to resolve from Artifactory 
-      // set the deployer to the Gradle build to deploy to Artifactory
-      // declare that your gradle script does not use Artifactory plugin
-      // declare that your gradle script uses Gradle wrapper
-   }
-   stage('Build') {
-      //run the artifactoryPublish gradle task and collect the build info
-   }
-   stage('Publish Build Info') {
-      //collect the environment variables to build info
-      //publish the build info
-   }
+    def rtServer
+    def rtGradle
+    def buildInfo
+    stage('Preparation') {
+        git 'https://github.com/jbaruch/gradle-example.git'
+        // create a new Artifactory server using the credentials defined in Jenkins 
+        // create a new Gradle build
+        // set the resolver to the Gradle build to resolve from Artifactory 
+        // set the deployer to the Gradle build to deploy to Artifactory
+        // declare that your gradle script does not use Artifactory plugin
+        // declare that your gradle script uses Gradle wrapper
+    }
+    stage('Build') {
+        //run the artifactoryPublish gradle task and collect the build info
+    }
+    stage('Publish Build Info') {
+        //collect the environment variables to build info
+        //publish the build info
+    }
 }
 ```
