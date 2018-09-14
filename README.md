@@ -7,12 +7,12 @@ Use [Artifactory Jenkins plugin documentation](https://www.jfrog.com/confluence/
 1. Clone this repository
 1. Install Jenkins
 1. Install Artifactory Jenkins Plugin
-1. ~~Set up JDK in Global Tool Configuration~~
-1. ~~Set up Artifactory in System Configuration~~ 
 1. Add Artifactory credentials to Jenkins Credentials
 1. Create a new pipeline job
 1. Use the [Artifactory Plugin DSL documentation](https://www.jfrog.com/confluence/display/RTF/Working+With+Pipeline+Jobs+in+Jenkins#WorkingWithPipelineJobsinJenkins-GradleBuildswithArtifactory) to complete the following script:
-```node {
+
+```
+node {
    stage('Preparation') {
       // Get the code from a GitHub repository
       git 'https://github.com/jbaruch/gradle-example.git'
