@@ -4,7 +4,6 @@ Simplest Gradle example for JFrog Jenkins Challenge.
 Use [Artifactory Jenkins plugin documentation](https://www.jfrog.com/confluence/display/RTF/Working+With+Pipeline+Jobs+in+Jenkins) to build the project.
 
 1. Get an Artifactory instance [(you can start a free trial on prem or in the cloud)](https://jfrog.com/artifactory/free-trial/)
-1. Clone this repository
 1. Install Jenkins
 1. Install Artifactory Jenkins Plugin
 1. Add Artifactory credentials to Jenkins Credentials
