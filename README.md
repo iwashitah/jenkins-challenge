@@ -17,19 +17,19 @@ node {
     def buildInfo
     stage('Preparation') {
         git 'https://github.com/jbaruch/gradle-example.git'
-        // create a new Artifactory server using the credentials defined in Jenkins 
-        // create a new Gradle build
-        // set the resolver to the Gradle build to resolve from Artifactory 
-        // set the deployer to the Gradle build to deploy to Artifactory
-        // declare that your gradle script does not use Artifactory plugin
-        // declare that your gradle script uses Gradle wrapper
+        // Jenkinsのクレデンシャルを使用して、Artifactoryサーバを作成します。
+        // Gradleビルドを作成します。
+        // リゾルバをGradleビルドに設定し、Artifactoryから解決します。
+        // デプロイヤをGradleビルドに設定してArtifactoryにデプロイします。
+        // GradleスクリプトがArtifactoryプラグインを使用しない定義をします。
+        // GradleスクリプトがGradleラッパーを使用する定義をします。
     }
     stage('Build') {
-        //run the artifactoryPublish gradle task and collect the build info
+        //GradleタスクのartifactoryPublishを実行し、ビルド情報を収集します。
     }
     stage('Publish Build Info') {
-        //collect the environment variables to build info
-        //publish the build info
+        //環境変数をビルド情報に収集します。
+        //ビルド情報をパブリッシュします。
     }
 }
 ```
